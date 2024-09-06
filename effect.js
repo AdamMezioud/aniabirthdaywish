@@ -6,7 +6,7 @@ $("document").ready(function () {
   var vw;
   $(window).resize(function () {
     vw = $(window).width() / 2;
-    $("#b1,#b2,#b3,#b4,#b5,#b6,#b7").stop();
+    $("#b1,#b2,#b3,#b4,#b5,#b6,).stop();
     $("#b11").animate({ top: 240, left: vw - 350 }, 500);
     $("#b22").animate({ top: 240, left: vw - 250 }, 500);
     $("#b33").animate({ top: 240, left: vw - 150 }, 500);
@@ -106,17 +106,12 @@ $("document").ready(function () {
       loopSix();
     });
   }
-  function loopSeven() {
-    var randleft = 1000 * Math.random();
-    var randtop = 500 * Math.random();
-    $("#b7").animate({ left: randleft, bottom: randtop }, 10000, function () {
-      loopSeven();
     });
   }
 
   $("#balloons_flying").click(function () {
     $(".balloon-border").animate({ top: -500 }, 8000);
-    $("#b1,#b4,#b5,#b7").addClass("balloons-rotate-behaviour-one");
+    $("#b1,#b4,#b5,).addClass("balloons-rotate-behaviour-one");
     $("#b2,#b3,#b6").addClass("balloons-rotate-behaviour-two");
 
     loopTwo();
@@ -166,7 +161,6 @@ $("document").ready(function () {
     $("#b4").attr("id", "b44");
     $("#b5").attr("id", "b55");
     $("#b6").attr("id", "b66");
-    $("#b7").attr("id", "b77");
     $("#b11").animate({ top: 240, left: vw - 350 }, 500);
     $("#b22").animate({ top: 240, left: vw - 250 }, 500);
     $("#b33").animate({ top: 240, left: vw - 150 }, 500);
